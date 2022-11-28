@@ -18,7 +18,7 @@ public class CommandLineMarkdownReader extends MarkdownReader {
             if ("STOP".equals(text)) {
                 break;
             }
-            contents.add(getMdParserFactory().parse(text));
+            contents.add(parseContent((text)));
         }
 
         return contents;

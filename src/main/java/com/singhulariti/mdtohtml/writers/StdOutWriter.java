@@ -8,8 +8,6 @@ import java.util.List;
 public class StdOutWriter extends MarkDownWriter {
     @Override
     public void writeContents(List<MarkDownContent> markDownContents) {
-        for (MarkDownContent content : markDownContents) {
-            System.out.println(getMdTagHandlerFactory().handleMdTag(content));
-        }
+        markDownContents.forEach(c -> System.out.println(convert(c)));
     }
 }

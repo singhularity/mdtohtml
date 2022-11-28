@@ -22,7 +22,7 @@ public class FileMarkdownReader extends MarkdownReader {
         try {
             Scanner reader = new Scanner(new FileInputStream(filePath));
             while (reader.hasNextLine()) {
-                contents.add(getMdParserFactory().parse(reader.nextLine()));
+                contents.add(parseContent(reader.nextLine()));
             }
         } catch (FileNotFoundException e) {
             throw new IllegalArgumentException("Invalid File Found!");

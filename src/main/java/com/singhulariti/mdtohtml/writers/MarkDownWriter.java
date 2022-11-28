@@ -19,7 +19,7 @@ public abstract class MarkDownWriter {
 
     abstract public void writeContents(List<MarkDownContent> markDownContents);
 
-    public MdContentConversionOrchestrator getMdTagHandlerFactory() {
-        return mdContentConversionOrchestrator;
+    protected String convert(MarkDownContent content) {
+        return mdContentConversionOrchestrator.handleMdTag(content);
     }
 }

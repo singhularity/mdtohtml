@@ -21,7 +21,7 @@ public abstract class MarkdownReader {
 
     public abstract List<MarkDownContent> readContent();
 
-    protected MdParsingOrchestrator getMdParserFactory() {
-        return mdParsingOrchestrator;
+    protected MarkDownContent parseContent(String content) {
+        return mdParsingOrchestrator.parse(content);
     }
 }
