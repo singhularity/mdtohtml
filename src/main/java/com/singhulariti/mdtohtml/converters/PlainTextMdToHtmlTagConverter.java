@@ -3,7 +3,7 @@ package com.singhulariti.mdtohtml.converters;
 import com.singhulariti.mdtohtml.dto.MarkDownContent;
 import com.singhulariti.mdtohtml.dto.TextMarkdownContent;
 
-public class PlainTextMdTagConverter extends MdTagConverter {
+public class PlainTextMdToHtmlTagConverter extends MdTagConverter {
     @Override
     public String handleMdTag(MarkDownContent markDownContent) {
         TextMarkdownContent markdownContent = (TextMarkdownContent) markDownContent;

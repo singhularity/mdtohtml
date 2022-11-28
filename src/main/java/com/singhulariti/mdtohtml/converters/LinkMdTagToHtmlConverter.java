@@ -3,7 +3,7 @@ package com.singhulariti.mdtohtml.converters;
 import com.singhulariti.mdtohtml.dto.LinkMarkDownContent;
 import com.singhulariti.mdtohtml.dto.MarkDownContent;
 
-public class LinkMdTagConverter extends MdTagConverter {
+public class LinkMdTagToHtmlConverter extends MdTagConverter {
     @Override
     public String handleMdTag(MarkDownContent markDownContent) {
         LinkMarkDownContent linkContents = (LinkMarkDownContent) markDownContent;

@@ -3,7 +3,7 @@ package com.singhulariti.mdtohtml.parsers;
 import com.singhulariti.mdtohtml.dto.MarkDownContent;
 import com.singhulariti.mdtohtml.dto.TextMarkdownContent;
 
-public class HeadingTextParser implements MarkdownParser {
+public class MdHeadingTextParser implements MdTextParser {
     @Override
     public boolean doesHandleToken(String token) {
         return token.startsWith("#");

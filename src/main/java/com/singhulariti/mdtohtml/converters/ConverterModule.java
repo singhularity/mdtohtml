@@ -7,7 +7,7 @@ public class ConverterModule extends AbstractModule {
     @Override
     protected void configure() {
         Multibinder<MdTagConverter> tagHandlers = Multibinder.newSetBinder(binder(), MdTagConverter.class);
-        tagHandlers.addBinding().to(LinkMdTagConverter.class);
-        tagHandlers.addBinding().to(PlainTextMdTagConverter.class);
+        tagHandlers.addBinding().to(LinkMdTagToHtmlConverter.class);
+        tagHandlers.addBinding().to(PlainTextMdToHtmlTagConverter.class);
     }
 }

@@ -3,7 +3,7 @@ package com.singhulariti.mdtohtml.parsers;
 import com.singhulariti.mdtohtml.dto.LinkMarkDownContent;
 import com.singhulariti.mdtohtml.dto.MarkDownContent;
 
-public class LinkTextParser implements MarkdownParser {
+public class MdLinkTextParser implements MdTextParser {
     @Override
     public boolean doesHandleToken(String token) {
         return token.startsWith("[");

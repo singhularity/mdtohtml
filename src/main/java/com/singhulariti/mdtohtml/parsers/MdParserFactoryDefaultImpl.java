@@ -7,16 +7,16 @@ import com.singhulariti.mdtohtml.dto.TextMarkdownContent;
 import java.util.Set;
 
 public class MdParserFactoryDefaultImpl implements MdParserFactory {
-    private final Set<MarkdownParser> parsers;
+    private final Set<MdTextParser> parsers;
 
     @Inject
-    public MdParserFactoryDefaultImpl(Set<MarkdownParser> parsers) {
+    public MdParserFactoryDefaultImpl(Set<MdTextParser> parsers) {
         this.parsers = parsers;
     }
 
     public MarkDownContent parse(String line) {
         if (line != null && !line.isEmpty()) {
-            for (MarkdownParser parser : parsers) {
+            for (MdTextParser parser : parsers) {
                 if (parser.doesHandleToken(line)) {
                     return parser.parse(line);
                 }
