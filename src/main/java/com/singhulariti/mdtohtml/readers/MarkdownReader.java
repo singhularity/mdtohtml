@@ -3,7 +3,7 @@ package com.singhulariti.mdtohtml.readers;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 import com.singhulariti.mdtohtml.dto.MarkDownContent;
-import com.singhulariti.mdtohtml.parsers.MdParserFactory;
+import com.singhulariti.mdtohtml.parsers.MdParsingOrchestrator;
 import com.singhulariti.mdtohtml.parsers.ParserModule;
 
 import java.util.List;
@@ -12,16 +12,16 @@ import java.util.List;
  * Implementing subclasses should return a list of parsed Markdown content that can identify tags and any content data
  * */
 public abstract class MarkdownReader {
-    private final MdParserFactory mdParserFactory;
+    private final MdParsingOrchestrator mdParsingOrchestrator;
 
     public MarkdownReader() {
         Injector injector = Guice.createInjector(new ParserModule());
-        this.mdParserFactory = injector.getInstance(MdParserFactory.class);
+        this.mdParsingOrchestrator = injector.getInstance(MdParsingOrchestrator.class);
     }
 
     public abstract List<MarkDownContent> readContent();
 
-    protected MdParserFactory getMdParserFactory() {
-        return mdParserFactory;
+    protected MdParsingOrchestrator getMdParserFactory() {
+        return mdParsingOrchestrator;
     }
 }

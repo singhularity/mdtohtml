@@ -5,7 +5,7 @@ import com.singhulariti.mdtohtml.readers.CommandLineMarkdownReader;
 import com.singhulariti.mdtohtml.readers.FileMarkdownReader;
 import com.singhulariti.mdtohtml.readers.MarkdownReader;
 import com.singhulariti.mdtohtml.writers.MarkDownWriter;
-import com.singhulariti.mdtohtml.writers.StdOutHtmlMarkDownWriter;
+import com.singhulariti.mdtohtml.writers.StdOutWriter;
 import jdk.jshell.spi.ExecutionControl;
 
 import java.util.Locale;
@@ -29,7 +29,7 @@ public class Driver {
         } else {
             throw new ExecutionControl.NotImplementedException("No implementation found for source: " + args[0]);
         }
-        MarkDownWriter writer = new StdOutHtmlMarkDownWriter();
+        MarkDownWriter writer = new StdOutWriter();
         writer.writeContents(reader.readContent());
     }
 }

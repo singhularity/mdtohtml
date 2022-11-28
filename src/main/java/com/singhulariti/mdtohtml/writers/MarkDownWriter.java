@@ -3,23 +3,23 @@ package com.singhulariti.mdtohtml.writers;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 import com.singhulariti.mdtohtml.converters.ConverterModule;
-import com.singhulariti.mdtohtml.converters.MdTagHandlerFactory;
+import com.singhulariti.mdtohtml.converters.MdContentConversionOrchestrator;
 import com.singhulariti.mdtohtml.dto.MarkDownContent;
 
 import java.util.List;
 
 /* Enforces contract for "writing" out the converted markdown content */
 public abstract class MarkDownWriter {
-    private final MdTagHandlerFactory mdTagHandlerFactory;
+    private final MdContentConversionOrchestrator mdContentConversionOrchestrator;
 
     public MarkDownWriter() {
         Injector injector = Guice.createInjector(new ConverterModule(), new WriterModule());
-        this.mdTagHandlerFactory = injector.getInstance(MdTagHandlerFactory.class);
+        this.mdContentConversionOrchestrator = injector.getInstance(MdContentConversionOrchestrator.class);
     }
 
     abstract public void writeContents(List<MarkDownContent> markDownContents);
 
-    public MdTagHandlerFactory getMdTagHandlerFactory() {
-        return mdTagHandlerFactory;
+    public MdContentConversionOrchestrator getMdTagHandlerFactory() {
+        return mdContentConversionOrchestrator;
     }
 }

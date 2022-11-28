@@ -10,6 +10,6 @@ public class ParserModule extends AbstractModule {
         Multibinder<MdTextParser> parsers = Multibinder.newSetBinder(binder(), MdTextParser.class);
         parsers.addBinding().to(MdLinkTextParser.class);
         parsers.addBinding().to(MdHeadingTextParser.class);
-        bind(MdParserFactory.class).to(MdParserFactoryDefaultImpl.class);
+        bind(MdParsingOrchestrator.class).to(MdParsingOrchestratorDefaultImpl.class);
     }
 }

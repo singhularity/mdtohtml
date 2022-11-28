@@ -7,11 +7,11 @@ import com.singhulariti.mdtohtml.dto.TextMarkdownContent;
 import java.util.Set;
 
 /* Default factory implementation to parse Markdown content using one of the registered eligible parsers */
-public class MdParserFactoryDefaultImpl implements MdParserFactory {
+public class MdParsingOrchestratorDefaultImpl implements MdParsingOrchestrator {
     private final Set<MdTextParser> parsers;
 
     @Inject
-    public MdParserFactoryDefaultImpl(Set<MdTextParser> parsers) {
+    public MdParsingOrchestratorDefaultImpl(Set<MdTextParser> parsers) {
         this.parsers = parsers;
     }
 

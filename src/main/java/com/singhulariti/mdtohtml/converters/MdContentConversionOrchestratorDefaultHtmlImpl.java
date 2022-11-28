@@ -7,11 +7,11 @@ import java.util.Set;
 
 /* Default implementation of a factory which returns converted version of
  *   parsed markdown content using registered handlers */
-public class MdTagHandlerFactoryDefaultHtmlImpl implements MdTagHandlerFactory {
+public class MdContentConversionOrchestratorDefaultHtmlImpl implements MdContentConversionOrchestrator {
     private Set<MdTagConverter> mdTagConverters;
 
     @Inject
-    public MdTagHandlerFactoryDefaultHtmlImpl(Set<MdTagConverter> mdTagConverters) {
+    public MdContentConversionOrchestratorDefaultHtmlImpl(Set<MdTagConverter> mdTagConverters) {
         this.mdTagConverters = mdTagConverters;
     }
 
