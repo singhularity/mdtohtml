@@ -3,6 +3,7 @@ package com.singhulariti.mdtohtml.converters;
 import com.singhulariti.mdtohtml.dto.MarkDownContent;
 import com.singhulariti.mdtohtml.dto.TextMarkdownContent;
 
+/* Converts a parsed Markdown header or plain text to HTML equivalent */
 public class PlainTextMdToHtmlTagConverter extends MdTagConverter {
     @Override
     public String handleMdTag(MarkDownContent markDownContent) {

@@ -3,6 +3,7 @@ package com.singhulariti.mdtohtml.converters;
 import com.singhulariti.mdtohtml.dto.LinkMarkDownContent;
 import com.singhulariti.mdtohtml.dto.MarkDownContent;
 
+/* Converts a parsed Markdown Link to HTML equivalent */
 public class LinkMdTagToHtmlConverter extends MdTagConverter {
     @Override
     public String handleMdTag(MarkDownContent markDownContent) {

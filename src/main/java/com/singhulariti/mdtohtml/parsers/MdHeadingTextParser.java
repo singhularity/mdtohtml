@@ -3,6 +3,7 @@ package com.singhulariti.mdtohtml.parsers;
 import com.singhulariti.mdtohtml.dto.MarkDownContent;
 import com.singhulariti.mdtohtml.dto.TextMarkdownContent;
 
+/* Can handle all "Heading" tags for Markdown content and return parsed tags and content */
 public class MdHeadingTextParser implements MdTextParser {
     @Override
     public boolean doesHandleToken(String token) {

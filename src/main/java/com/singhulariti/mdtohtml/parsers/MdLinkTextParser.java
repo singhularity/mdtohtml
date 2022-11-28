@@ -3,6 +3,7 @@ package com.singhulariti.mdtohtml.parsers;
 import com.singhulariti.mdtohtml.dto.LinkMarkDownContent;
 import com.singhulariti.mdtohtml.dto.MarkDownContent;
 
+/* Can handle all "Heading" tags for Markdown content and return parsed tags, link text and url */
 public class MdLinkTextParser implements MdTextParser {
     @Override
     public boolean doesHandleToken(String token) {

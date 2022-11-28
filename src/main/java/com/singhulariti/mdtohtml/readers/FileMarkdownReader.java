@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+/* Can read Markdown content from a file and returned parsed content*/
 public class FileMarkdownReader extends MarkdownReader {
     private final String filePath;
 

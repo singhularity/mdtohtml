@@ -8,6 +8,7 @@ import com.singhulariti.mdtohtml.dto.MarkDownContent;
 
 import java.util.List;
 
+/* Enforces contract for "writing" out the converted markdown content */
 public abstract class MarkDownWriter {
     private final MdTagHandlerFactory mdTagHandlerFactory;
 

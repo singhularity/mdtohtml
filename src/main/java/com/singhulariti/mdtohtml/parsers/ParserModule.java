@@ -3,6 +3,7 @@ package com.singhulariti.mdtohtml.parsers;
 import com.google.inject.AbstractModule;
 import com.google.inject.multibindings.Multibinder;
 
+/* Registers the eligible Markdown content parsers */
 public class ParserModule extends AbstractModule {
     @Override
     protected void configure() {

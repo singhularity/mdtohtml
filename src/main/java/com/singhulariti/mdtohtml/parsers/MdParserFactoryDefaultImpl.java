@@ -6,6 +6,7 @@ import com.singhulariti.mdtohtml.dto.TextMarkdownContent;
 
 import java.util.Set;
 
+/* Default factory implementation to parse Markdown content using one of the registered eligible parsers */
 public class MdParserFactoryDefaultImpl implements MdParserFactory {
     private final Set<MdTextParser> parsers;
 

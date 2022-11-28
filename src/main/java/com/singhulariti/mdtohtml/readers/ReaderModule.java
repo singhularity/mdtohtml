@@ -3,6 +3,7 @@ package com.singhulariti.mdtohtml.readers;
 import com.google.inject.AbstractModule;
 import com.google.inject.name.Names;
 
+/* Register all Markdown content readers here */
 public class ReaderModule extends AbstractModule {
     @Override
     protected void configure() {

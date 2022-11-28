@@ -3,9 +3,9 @@ package com.singhulariti.mdtohtml.writer;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 import com.singhulariti.mdtohtml.converters.ConverterModule;
+import com.singhulariti.mdtohtml.converters.MdTagHandlerFactory;
 import com.singhulariti.mdtohtml.dto.LinkMarkDownContent;
 import com.singhulariti.mdtohtml.dto.TextMarkdownContent;
-import com.singhulariti.mdtohtml.converters.MdTagHandlerFactory;
 import com.singhulariti.mdtohtml.writers.WriterModule;
 import org.junit.jupiter.api.Test;
 
